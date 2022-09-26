@@ -81,7 +81,7 @@ header {
                         z-index: 1;
                         width: max-content;
                         padding: 20px;
-                        isolation: isolate;
+                        // isolation: isolate;
                         transition: var(--custom-transition);
                         opacity: 0;
                         visibility: hidden;
@@ -94,6 +94,10 @@ header {
                                 font-size: 14px;
                                 line-height: 24px;
                                 display: block;
+                                font-family: Rosario;
+                                &::before {
+                                    content: "> ";
+                                }
                             }
                         }
                         &::before {
@@ -102,6 +106,7 @@ header {
                             inset: 10px;
                             border: 1px solid #a58251;
                             z-index: 1;
+                            pointer-events: none;
                         }
                     }
                     &:hover {

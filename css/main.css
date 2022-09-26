@@ -556,7 +556,6 @@ header .container .navbar__nav .navbar .nav-item .dropdown {
   width: -moz-max-content;
   width: max-content;
   padding: 20px;
-  isolation: isolate;
   transition: var(--custom-transition);
   opacity: 0;
   visibility: hidden;
@@ -569,6 +568,10 @@ header .container .navbar__nav .navbar .nav-item .dropdown li a {
   font-size: 14px;
   line-height: 24px;
   display: block;
+  font-family: Rosario;
+}
+header .container .navbar__nav .navbar .nav-item .dropdown li a::before {
+  content: "> ";
 }
 header .container .navbar__nav .navbar .nav-item .dropdown::before {
   position: absolute;
@@ -576,6 +579,7 @@ header .container .navbar__nav .navbar .nav-item .dropdown::before {
   inset: 10px;
   border: 1px solid #a58251;
   z-index: 1;
+  pointer-events: none;
 }
 header .container .navbar__nav .navbar .nav-item:hover .dropdown {
   opacity: 1;
