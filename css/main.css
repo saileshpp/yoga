@@ -571,7 +571,10 @@ header .container .navbar__nav .navbar .nav-item .dropdown li a {
   font-family: Rosario;
 }
 header .container .navbar__nav .navbar .nav-item .dropdown li a::before {
-  content: "> ";
+  content: "\f105";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 10px;
 }
 header .container .navbar__nav .navbar .nav-item .dropdown::before {
   position: absolute;

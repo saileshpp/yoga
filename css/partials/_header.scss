@@ -96,7 +96,10 @@ header {
                                 display: block;
                                 font-family: Rosario;
                                 &::before {
-                                    content: "> ";
+                                    content: "\f105";
+                                    font-family: "Font Awesome 6 Free";
+                                    font-weight: 900;
+                                    margin-right: 10px;
                                 }
                             }
                         }
