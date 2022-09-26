@@ -8,7 +8,7 @@ header {
     padding: 15px 0;
     transition: var(--custom-transition);
     border-bottom: 5px solid var(--custom-yellow);
-    width: 100vw;
+    width: 100%;
     .container {
         display: flex;
         align-items: center;
@@ -17,7 +17,7 @@ header {
             img {
                 width: 100%;
                 max-width: 120px;
-                filter: brightness(0) invert(1);
+
                 transition: var(--custom-transition);
             }
         }
@@ -71,6 +71,45 @@ header {
                             }
                         }
                     }
+                    position: relative;
+                    .dropdown {
+                        list-style: none;
+                        background-color: #fff;
+                        background-image: url(../img/pattern-grudge.png);
+                        position: absolute;
+                        top: calc(100% + 44px);
+                        z-index: 1;
+                        width: max-content;
+                        padding: 20px;
+                        isolation: isolate;
+                        transition: var(--custom-transition);
+                        opacity: 0;
+                        visibility: hidden;
+                        li {
+                            a {
+                                color: #484338;
+                                text-decoration: none;
+                                line-height: 24px;
+                                padding: 10px;
+                                font-size: 14px;
+                                line-height: 24px;
+                                display: block;
+                            }
+                        }
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            inset: 10px;
+                            border: 1px solid #a58251;
+                            z-index: 1;
+                        }
+                    }
+                    &:hover {
+                        .dropdown {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
                 }
             }
         }
@@ -94,6 +133,16 @@ header {
                     width: 100%;
                     max-width: 80px;
                     filter: brightness(0) invert(1);
+                }
+            }
+            .navbar__nav {
+                .navbar {
+                    .nav-item {
+                        position: relative;
+                        .dropdown {
+                            top: calc(100% + 18px);
+                        }
+                    }
                 }
             }
         }

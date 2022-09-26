@@ -482,7 +482,7 @@ header {
   padding: 15px 0;
   transition: var(--custom-transition);
   border-bottom: 5px solid var(--custom-yellow);
-  width: 100vw;
+  width: 100%;
 }
 header * {
   font-family: overlock;
@@ -495,12 +495,14 @@ header .container {
 header .container .logo img {
   width: 100%;
   max-width: 120px;
-  filter: brightness(0) invert(1);
   transition: var(--custom-transition);
 }
 header .container .navbar__nav .navbar {
   list-style: none;
   padding: 0;
+}
+header .container .navbar__nav .navbar .nav-item {
+  position: relative;
 }
 header .container .navbar__nav .navbar .nav-item .nav-link {
   color: #fff;
@@ -543,6 +545,42 @@ header .container .navbar__nav .navbar .nav-item .nav-link:hover::before, header
 header .container .navbar__nav .navbar .nav-item .nav-link:hover::after {
   left: 0;
 }
+header .container .navbar__nav .navbar .nav-item .dropdown {
+  list-style: none;
+  background-color: #fff;
+  background-image: url(../img/pattern-grudge.png);
+  position: absolute;
+  top: calc(100% + 44px);
+  z-index: 1;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 20px;
+  isolation: isolate;
+  transition: var(--custom-transition);
+  opacity: 0;
+  visibility: hidden;
+}
+header .container .navbar__nav .navbar .nav-item .dropdown li a {
+  color: #484338;
+  text-decoration: none;
+  line-height: 24px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+}
+header .container .navbar__nav .navbar .nav-item .dropdown::before {
+  position: absolute;
+  content: "";
+  inset: 10px;
+  border: 1px solid #a58251;
+  z-index: 1;
+}
+header .container .navbar__nav .navbar .nav-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+}
 header .container .hamburger {
   color: #fff;
   font-size: 20px;
@@ -563,6 +601,12 @@ header.is__active .container .logo img {
   width: 100%;
   max-width: 80px;
   filter: brightness(0) invert(1);
+}
+header.is__active .container .navbar__nav .navbar .nav-item {
+  position: relative;
+}
+header.is__active .container .navbar__nav .navbar .nav-item .dropdown {
+  top: calc(100% + 18px);
 }
 
 .mm-spn.mm-spn--light {
@@ -588,7 +632,6 @@ footer .footer__top {
 }
 footer .footer__top .logo img {
   max-width: 150px;
-  filter: brightness(0);
   opacity: 0.8;
   margin-bottom: 20px;
   margin-inline: auto;
