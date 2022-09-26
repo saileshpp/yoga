@@ -164,8 +164,22 @@ header {
 @include responsive-max(992px) {
     header {
         .container {
+            .logo {
+                img {
+                    max-width: 80px;
+                }
+            }
             .hamburger {
                 display: block;
+            }
+        }
+        &.is__active {
+            .container {
+                .logo {
+                    img {
+                        max-width: 60px;
+                    }
+                }
             }
         }
     }

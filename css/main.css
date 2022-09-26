@@ -623,8 +623,14 @@ header.is__active .container .navbar__nav .navbar .nav-item .dropdown {
 }
 
 @media screen and (max-width: 992px) {
+  header .container .logo img {
+    max-width: 80px;
+  }
   header .container .hamburger {
     display: block;
+  }
+  header.is__active .container .logo img {
+    max-width: 60px;
   }
 }
 footer {
