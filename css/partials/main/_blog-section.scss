@@ -1,0 +1,21 @@
+.pagination {
+    justify-content: center;
+    .disabled {
+        .page-link {
+            background-image: url(../img/pattern-grudge.png);
+            background-color: #fff;
+        }
+    }
+    .active {
+        .page-link {
+            background-color: var(--custom-primary);
+            border-color: var(--custom-primary);
+        }
+    }
+    .page-link {
+        color: #444;
+        background-image: url(../img/pattern-grudge.png);
+        border-color: rgba(165, 130, 81, 0.25);
+        box-shadow: none !important;
+    }
+}

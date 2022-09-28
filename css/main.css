@@ -497,9 +497,15 @@ header .container .logo img {
   max-width: 120px;
   transition: var(--custom-transition);
 }
+header .container .navbar__nav {
+  margin-inline: auto;
+}
 header .container .navbar__nav .navbar {
   list-style: none;
   padding: 0;
+}
+header .container .navbar__nav .navbar .logo {
+  margin: 0 15px;
 }
 header .container .navbar__nav .navbar .nav-item {
   position: relative;
@@ -631,6 +637,9 @@ header.is__active .container .navbar__nav .navbar .nav-item .dropdown {
   }
   header.is__active .container .logo img {
     max-width: 60px;
+  }
+  .navbar__nav .navbar .logo {
+    display: none !important;
   }
 }
 footer {
@@ -1258,4 +1267,21 @@ footer .footer__bot p {
     align-items: center;
     gap: 10px;
   }
+}
+.pagination {
+  justify-content: center;
+}
+.pagination .disabled .page-link {
+  background-image: url(../img/pattern-grudge.png);
+  background-color: #fff;
+}
+.pagination .active .page-link {
+  background-color: var(--custom-primary);
+  border-color: var(--custom-primary);
+}
+.pagination .page-link {
+  color: #444;
+  background-image: url(../img/pattern-grudge.png);
+  border-color: rgba(165, 130, 81, 0.25);
+  box-shadow: none !important;
 }/*# sourceMappingURL=main.css.map */

@@ -22,9 +22,13 @@ header {
             }
         }
         .navbar__nav {
+            margin-inline: auto;
             .navbar {
                 list-style: none;
                 padding: 0;
+                .logo {
+                    margin: 0 15px;
+                }
                 .nav-item {
                     .nav-link {
                         color: #fff;
@@ -169,6 +173,7 @@ header {
                     max-width: 80px;
                 }
             }
+          
             .hamburger {
                 display: block;
             }
@@ -180,6 +185,13 @@ header {
                         max-width: 60px;
                     }
                 }
+            }
+        }
+    }
+    .navbar__nav {
+        .navbar {
+            .logo {
+                display: none !important;
             }
         }
     }
