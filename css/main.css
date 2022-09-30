@@ -1298,9 +1298,175 @@ footer .footer__bot p {
   border-bottom: 1px solid rgba(165, 130, 81, 0.3);
   text-align: center;
 }
+.blog__section h1.title .author {
+  font-size: 12px;
+  font-family: rosario;
+  font-weight: 400;
+  margin-top: 15px;
+}
 .blog__section .thumbnail img {
   width: 100%;
 }
 .blog__section .paragraph {
   margin-top: 50px;
+  line-height: 30px;
+}
+.blog__section .comment__section {
+  padding: 50px 0;
+}
+.blog__section .comment__section .comment__wrap {
+  display: flex;
+  gap: 10px;
+  background-color: #fff;
+  background-image: url(../img/pattern-grudge.png);
+}
+.blog__section .comment__section .comment__wrap .left {
+  background-color: #e5dbc1;
+  min-width: 110px;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.blog__section .comment__section .comment__wrap .left img {
+  width: 100%;
+  max-width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.blog__section .comment__section .comment__wrap .right {
+  padding: 10px 20px;
+  color: #484338;
+}
+.blog__section .comment__section .comment__wrap .right .author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.blog__section .comment__section .comment__wrap .right .author .date {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 575px) {
+  .blog__section h1.title {
+    font-family: Ptserif;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 15px 0 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(165, 130, 81, 0.3);
+    text-align: center;
+  }
+  .blog__section h1.title .author {
+    font-size: 12px;
+    font-family: rosario;
+    font-weight: 400;
+    margin-top: 15px;
+  }
+  .blog__section .paragraph {
+    margin-top: 30px;
+  }
+  .blog__section .comment__section {
+    padding: 40px 0;
+  }
+  .blog__section .comment__section .comment__wrap {
+    display: flex;
+    gap: 10px;
+    background-color: #fff;
+    background-image: url(../img/pattern-grudge.png);
+    flex-direction: column;
+  }
+  .blog__section .comment__section .comment__wrap .left {
+    background-color: #e5dbc1;
+    min-width: 110px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .blog__section .comment__section .comment__wrap .left img {
+    width: 100%;
+    max-width: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  .blog__section .comment__section .comment__wrap .right {
+    padding: 10px 20px;
+    color: #484338;
+  }
+  .blog__section .comment__section .comment__wrap .right .author {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .blog__section .comment__section .comment__wrap .right .author .date {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+.form__wrap .form-control {
+  color: #333333;
+  padding: 16px 12px 15px;
+  background-color: transparent;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(165, 130, 81, 0.3);
+}
+.form__wrap .form-control::-moz-placeholder {
+  color: #333333;
+}
+.form__wrap .form-control:-ms-input-placeholder {
+  color: #333333;
+}
+.form__wrap .form-control::placeholder {
+  color: #333333;
+}
+.form__wrap textarea.form-control {
+  width: 100%;
+  min-height: 200px;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(4, auto);
+  gap: 5px;
+}
+.gallery__grid a {
+  display: block;
+  aspect-ratio: 1;
+}
+.gallery__grid > a:nth-of-type(9n + 1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.gallery__grid img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1;
+  height: 100%;
+}
+
+@media screen and (max-width: 575px) {
+  .gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+    gap: 5px;
+  }
+  .gallery__grid a {
+    display: block;
+    aspect-ratio: 1;
+  }
+  .gallery__grid > a:nth-of-type(9n + 1) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  .gallery__grid img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    aspect-ratio: 1;
+    height: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */

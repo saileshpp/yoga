@@ -84,3 +84,8 @@ document.addEventListener(
             });
     }
 );
+lightGallery(document.querySelector('.gallery__grid'), {
+    plugins: [lgZoom, lgThumbnail],
+    speed: 600,
+    licenseKey: "0000-0000-000-0000",
+});
