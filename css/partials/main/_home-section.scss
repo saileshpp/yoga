@@ -115,6 +115,9 @@
     display: flex;
     gap: 20px;
     align-items: center;
+    .yoga{
+        
+    }
 }
 @include responsive-max(768px) {
     .newsletter {
