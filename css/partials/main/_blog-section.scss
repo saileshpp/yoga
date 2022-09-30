@@ -19,3 +19,23 @@
         box-shadow: none !important;
     }
 }
+.blog__section {
+    background-color: #f5f0e3;
+    h1.title {
+        font-family: Ptserif;
+        font-weight: bold;
+        font-size: 40px;
+        padding: 15px 0 50px;
+        margin-bottom: 50px;
+        border-bottom: 1px solid rgba(165, 130, 81, 0.3);
+        text-align: center;
+    }
+    .thumbnail {
+        img {
+            width: 100%;
+        }
+    }
+    .paragraph {
+        margin-top: 50px;
+    }
+}

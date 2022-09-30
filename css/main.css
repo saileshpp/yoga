@@ -1284,4 +1284,23 @@ footer .footer__bot p {
   background-image: url(../img/pattern-grudge.png);
   border-color: rgba(165, 130, 81, 0.25);
   box-shadow: none !important;
+}
+
+.blog__section {
+  background-color: #f5f0e3;
+}
+.blog__section h1.title {
+  font-family: Ptserif;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 15px 0 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(165, 130, 81, 0.3);
+  text-align: center;
+}
+.blog__section .thumbnail img {
+  width: 100%;
+}
+.blog__section .paragraph {
+  margin-top: 50px;
 }/*# sourceMappingURL=main.css.map */
