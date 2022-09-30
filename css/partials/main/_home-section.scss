@@ -111,6 +111,11 @@
         }
     }
 }
+.yoga__alliance {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 @include responsive-max(768px) {
     .newsletter {
         display: flex;
