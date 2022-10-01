@@ -1071,6 +1071,100 @@ footer .footer__bot p {
   font-size: 14px;
 }
 
+.card__5 {
+  position: relative;
+  text-decoration: none;
+  color: var(--custom-black) !important;
+  transition: var(--custom-transition);
+  isolation: isolate;
+}
+.card__5 .img__wrap {
+  position: relative;
+  overflow: hidden;
+}
+.card__5 .img__wrap::after {
+  content: "View Course";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(126, 132, 70, 0.862745098);
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: all 0.35s ease 0s;
+}
+.card__5 .card__body {
+  transition: var(--custom-transition);
+  padding: 20px 15px 20px 0;
+  display: flex;
+  background-color: #fff;
+  gap: 20px;
+  background-image: url(../img/pattern-grudge.png);
+}
+.card__5 .card__body .price {
+  transition: var(--custom-transition);
+  text-align: center;
+  background-color: #e5dbc1;
+  padding: 5px 15px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  flex: none;
+}
+.card__5 .card__body .card__info .title {
+  font-family: Ptserif;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.card__5 .card__body .card__info .desc {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 26px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px dashed #d4ad76;
+  padding-bottom: 15px;
+}
+.card__5 .card__body .card__info .hours {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+.card__5::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  transition: var(--custom-transition);
+  border-color: rgba(165, 130, 81, 0.25);
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+  transform: translate(12px, 12px);
+  z-index: -1;
+  opacity: 0.1;
+}
+.card__5:hover .card__body {
+  background-color: #ffda6b;
+}
+.card__5:hover .card__body .date {
+  background-color: #fff;
+}
+.card__5:hover::before {
+  transform: translate(5px, 5px);
+  opacity: 0.5;
+}
+.card__5:hover .img__wrap::after {
+  transform: translateY(0%);
+}
+
 .btn {
   text-transform: uppercase;
   width: -webkit-max-content;
