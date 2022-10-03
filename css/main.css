@@ -432,7 +432,6 @@ section > .container {
   line-height: 36px;
   letter-spacing: 0.15em;
   text-align: center;
-  text-transform: uppercase;
 }
 .section__title h5::before {
   height: 1px;
@@ -1164,6 +1163,49 @@ footer .footer__bot p {
 }
 .card__5:hover .img__wrap::after {
   transform: translateY(0%);
+}
+
+.location__card {
+  isolation: isolate;
+  text-align: center;
+  transition: var(--custom-transition);
+  background-image: url(../img/pattern-grudge.png);
+  background-color: #e5dbc1;
+  position: relative;
+  padding: 30px 20px;
+  color: #484338;
+  height: 100%;
+  z-index: 1;
+}
+.location__card::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  transition: var(--custom-transition);
+  border-color: rgba(165, 130, 81, 0.25);
+  width: 100%;
+  height: 100%;
+  border: 1px solid;
+  transform: translate(12px, 12px);
+  z-index: -1;
+  opacity: 0.2;
+}
+.location__card .icon {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.location__card h2 {
+  font-family: Ptserif;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.location__card:hover {
+  background-color: #ffda6b;
+}
+.location__card:hover::before {
+  transform: translate(0, 0);
+  opacity: 0.5;
 }
 
 .btn {
