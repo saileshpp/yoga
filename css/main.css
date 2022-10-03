@@ -432,6 +432,7 @@ section > .container {
   line-height: 36px;
   letter-spacing: 0.15em;
   text-align: center;
+  text-transform: uppercase;
 }
 .section__title h5::before {
   height: 1px;
@@ -1568,4 +1569,14 @@ footer .footer__bot p {
     aspect-ratio: 1;
     height: 100%;
   }
+}
+.contact__form {
+  max-width: 770px;
+  margin-inline: auto;
+}
+
+.map iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */
