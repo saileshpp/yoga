@@ -41,7 +41,7 @@ if (document.querySelector('.banner__slider')) {
     homeSlider.mount()
 }
 if (document.querySelector('.testimonial__slide')) {
-    const homeSlider = new Splide('.testimonial__slide', {
+    const testimonialSlider = new Splide('.testimonial__slide', {
         type: 'loop',
         perPage: 1,
         pagination: false,
@@ -61,9 +61,49 @@ if (document.querySelector('.testimonial__slide')) {
             },
         }
     })
-    homeSlider.mount()
+    testimonialSlider.mount()
 }
+if (document.querySelector('.course__slide')) {
+    const courseSlider = new Splide('.course__slide', {
+        type: 'loop',
+        perPage: 1,
+        pagination: false,
+        rewind: true,
+        autoplay: true,
+        autoHeight: true,
+        interval: 5000,
+        speed: 1500,
+        pauseOnHover: false,
+        autoplay: true,
+        arrows: false,
+        breakpoints: {
+            991: {
 
+            },
+        }
+    })
+
+
+    const courseThumbSlider = new Splide('.course__slide__thumb', {
+        fixedWidth: 100,
+        fixedHeight: 60,
+        gap: 10,
+        rewind: true,
+        pagination: false,
+        focus: 'center',
+        isNavigation: true,
+        breakpoints: {
+            600: {
+                fixedWidth: 60,
+                fixedHeight: 44,
+            },
+        },
+    })
+    
+    courseSlider.sync(courseThumbSlider)
+    courseSlider.mount()
+    courseThumbSlider.mount()
+}
 document.addEventListener(
     "DOMContentLoaded", () => {
         const menu = new MmenuLight(
@@ -84,8 +124,17 @@ document.addEventListener(
             });
     }
 );
-lightGallery(document.querySelector('.gallery__grid'), {
-    plugins: [lgZoom, lgThumbnail],
-    speed: 600,
-    licenseKey: "0000-0000-000-0000",
-});
+if (document.querySelector('.gallery__grid')) {
+
+    lightGallery(document.querySelector('.gallery__grid'), {
+        plugins: [lgZoom, lgThumbnail],
+        speed: 600,
+        licenseKey: "0000-0000-000-0000",
+    });
+
+}
+if (document.querySelector('.course__slide')) {
+    $('.course__slide').zoom({
+        magnify: 2,
+    });
+}
